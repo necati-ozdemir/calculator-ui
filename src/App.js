@@ -11,14 +11,13 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-
 function App() {
-
+    require('dotenv').config();
     const classes = useStyles();
     return (
-        <div className="Checkout">
-            <body className="Checkout-body">
-            <Calculator></Calculator>
+        <div className="Calculator">
+            <body className="Calculator-body">
+            <Calculator classes={classes}>My Calculator</Calculator>
             </body>
         </div>
     );

@@ -8,9 +8,9 @@ node {
 //    }
 
     stage('Initialize') {
-        def dockerHome = tool 'docker'
+
         def nodeJsHome = tool 'NodeJS'
-        env.PATH = "${dockerHome}/bin:${nodeJsHome}/bin:${env.PATH}"
+        env.PATH = "${nodeJsHome}/bin:${env.PATH}"
     }
 
 
@@ -18,6 +18,7 @@ node {
         checkout scm
     }
     stage('Get dependencies') {
+        sh 'npm i --save cross-spawn'
         sh 'npm install'
     }
     stage('Execute') {

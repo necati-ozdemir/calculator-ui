@@ -22,7 +22,7 @@ node {
         sh 'npm install'
     }
     stage('Execute') {
-        sh 'npm start'
+        sh '(npm start&)'
     }
 
 

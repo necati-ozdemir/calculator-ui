@@ -8,9 +8,9 @@ node {
 //    }
 
     stage('Initialize') {
-        def dockerHome = tool 'docker'
+
         def nodeJsHome = tool 'NodeJS'
-        env.PATH = "${dockerHome}/bin:${nodeJsHome}/bin:${env.PATH}"
+        env.PATH = "${nodeJsHome}/bin:${env.PATH}"
     }
 
 

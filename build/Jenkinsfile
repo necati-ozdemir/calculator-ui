@@ -18,6 +18,7 @@ node {
         checkout scm
     }
     stage('Get dependencies') {
+        sh 'npm i --save cross-spawn'
         sh 'npm install'
     }
     stage('Execute') {

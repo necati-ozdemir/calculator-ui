@@ -86,8 +86,8 @@ export default class Calculator extends React.Component {
                         value={this.state.calculationType}
                         onChange={this.handleChange}
                     >
-                        <MenuItem value={"ADDITION"}>ADDITION</MenuItem>
-                        <MenuItem value={"SUBTRACTION"}>SUBTRACTION</MenuItem>
+                        <MenuItem id={"ADDITION"} value={"ADDITION"}>ADDITION</MenuItem>
+                        <MenuItem id={"SUBTRACTION"} value={"SUBTRACTION"}>SUBTRACTION</MenuItem>
                     </Select>
                     <Button id="calculationButton"
                             onClick={() => {

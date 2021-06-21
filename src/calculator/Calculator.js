@@ -27,6 +27,8 @@ export default class Calculator extends React.Component {
             this.doPostRequest(process.env.REACT_APP_CALCULATOR_SERVICE_ADDITION_URL)
         } else if (this.state.calculationType === 'SUBTRACTION') {
             this.doPostRequest(process.env.REACT_APP_CALCULATOR_SERVICE_SUBTRACTION_URL)
+        } else if (this.state.calculationType === 'DIVISION') {
+            this.doPostRequest(process.env.REACT_APP_CALCULATOR_SERVICE_DIVISION_URL)
         }
     }
 
@@ -88,6 +90,7 @@ export default class Calculator extends React.Component {
                     >
                         <MenuItem id={"ADDITION"} value={"ADDITION"}>ADDITION</MenuItem>
                         <MenuItem id={"SUBTRACTION"} value={"SUBTRACTION"}>SUBTRACTION</MenuItem>
+                        <MenuItem id={"DIVISION"} value={"DIVISION"}>DIVISION</MenuItem>
                     </Select>
                     <Button id="calculationButton"
                             onClick={() => {
